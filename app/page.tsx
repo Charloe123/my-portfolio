@@ -2,11 +2,11 @@
 import React from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import ContactSection from "@/components/ContactSection";
 import AnimatedShapes from "@/components/AnimatedShape";
 import MouseTrailer from "@/components/MouseTrailer"; 
 import TwoButton from "@/components/TwoButton";
 import AboutPage from "./about/page";
+import ContactPage from "./contact/page";
 
 export default function Home() {
   return (
@@ -55,7 +55,7 @@ export default function Home() {
 
        
         <div className="mt-32">
-          <ContactSection />
+          <ContactPage/>
         </div>
       </section>
     </>
