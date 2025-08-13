@@ -1,8 +1,7 @@
+"use client";
 import React from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Spline from "@splinetool/react-spline";
-import Link from "next/link";
 import ContactSection from "@/components/ContactSection";
 import AnimatedShapes from "@/components/AnimatedShape";
 import MouseTrailer from "@/components/MouseTrailer"; 
