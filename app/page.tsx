@@ -3,59 +3,65 @@ import React from "react";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import AnimatedShapes from "@/components/AnimatedShape";
-import MouseTrailer from "@/components/MouseTrailer"; 
+import MouseTrailer from "@/components/MouseTrailer";
 import TwoButton from "@/components/TwoButton";
 import AboutPage from "./about/page";
 import ContactPage from "./contact/page";
+import Tools from "@/components/Tools";
+import MyProject from "../components/MyProject";
+
 
 export default function Home() {
   return (
     <>
-     
       <MouseTrailer />
 
       <Navbar />
 
       <section>
-        <div className="relative h-screen w-full overflow-hidden ">
-        
+        <div>
           <video
             autoPlay
             loop
             muted
             playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+            className="absolute bottom-1 top-0.5 left-0 w-full min-h-[100vh] object-cover z-[-1]"
           >
             <source src="/bg-vid.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
-          <div className="z-10">
+          <div className="absolute inset-0 z-10">
             <AnimatedShapes />
           </div>
 
-          <div className="flex flex-col justify-center font-[Mersad] items-center h-[100%] z-50">
-            <h1 className="text-white text-6xl ">Grafting Code & Creativity</h1>
-            <p className="text-white text-2xl mt-3">
+          <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-16">
+            <h1 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
+              Grafting Code & Creativity
+            </h1>
+            <p className="text-white mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
               Hello, I am Charlotte Ncube, a Software Developer
-            </p>    
-            <div className="gap-10 flex"></div>
-
-            <TwoButton />
-          </div>
-
-        
-          <div className="flex flex-col-reverse md:flex-row justify-between gap-8 md:gap-[30px] h-full relative">
-            
+            </p>
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 sm:gap-10">
+              <TwoButton />
+            </div>
           </div>
         </div>
-        <div >
-          <AboutPage/>
+
+        <div className="min-h-screen mt">
+          <AboutPage />
         </div>
 
-       
-        <div className="mt-32">
-          <ContactPage/>
+        <div>
+          <Tools />
+        </div>
+
+        <div className="h-screen w-full  overflow-x-hidden">
+          <MyProject />
+        </div>
+
+        <div className="">
+          <ContactPage />
         </div>
       </section>
     </>

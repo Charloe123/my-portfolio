@@ -1,33 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function AnimatedShapesWithPulse() {
   const shapeCount = 8;
+  const [shapes, setShapes] = useState<
+    { size: number; top: number; left: number; delay: number }[]
+  >([]);
+
+  useEffect(() => {
+    const generatedShapes = Array.from({ length: shapeCount }, () => ({
+      size: 10 + Math.random() * 30,
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      delay: Math.random() * 2,
+    }));
+    setShapes(generatedShapes);
+  }, []);
 
   return (
     <div className="absolute inset-0 overflow-hidden flex">
-      {[...Array(shapeCount)].map((_, i) => {
-        const size = 10 + Math.random() * 30;
-        const top = Math.random() * 100;
-        const left = Math.random() * 100;
-        const delay = Math.random() * 2;
-
-        return (
-          <div
-            key={`shape-${i}`}
-            className="absolute rounded-full bg-teal-600"
-            style={{
-              width: size,
-              height: size,
-              top: `${top}%`,
-              left: `${left}%`,
-              animation: `bounce 4s ease-in-out infinite`, // slower bounce
-              animationDelay: `${delay}s`,
-            }}
-          />
-        );
-      })}
+      {shapes.map((shape, i) => (
+        <div
+          key={`shape-${i}`}
+          className="absolute rounded-full bg-teal-600"
+          style={{
+            width: shape.size,
+            height: shape.size,
+            top: `${shape.top}%`,
+            left: `${shape.left}%`,
+            animation: `bounce 4s ease-in-out infinite`,
+            animationDelay: `${shape.delay}s`,
+          }}
+        />
+      ))}
 
       <style jsx>{`
         @keyframes bounce {

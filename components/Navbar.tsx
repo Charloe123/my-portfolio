@@ -18,12 +18,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
-          {/* Left - Name with animated gradient */}
+         
           <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-teal-400 bg-clip-text text-transparent animate-gradient">
             <Link href="#home">Charlotte Ncube</Link>
           </div>
 
-          {/* Center - Rounded Links */}
+          
           <div className="hidden md:flex space-x-4">
             {navLinks.map((link) => (
               <a
@@ -36,7 +36,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right - Hire Me Button */}
+          
           <div className="hidden md:block">
             <a
               href="#contact"
@@ -46,7 +46,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile menu button */}
+          
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? "✖" : "☰"}
@@ -55,7 +55,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile dropdown menu */}
+      
       {isOpen && (
         <div className="md:hidden bg-white/10 backdrop-blur-md px-4 pb-4 space-y-2 border-t border-white/20">
           {navLinks.map((link) => (
