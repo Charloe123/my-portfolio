@@ -16,10 +16,10 @@ export default function AboutPage() {
         >
           <div className="relative group">
             <div className="relative flex justify-center items-center">
-              <div className="relative rounded-full bg-black/10 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]">
+              <div className="relative rounded-full bg-[#040d15] w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]">
                 <Image
-                  src="/charloe.png"
-                  alt="Charlotte"
+                  src="/dev.jpg"
+                  alt=""
                   fill
                   className="rounded-full object-contain shadow-lg transform transition-transform duration-500 group-hover:scale-105"
                   priority
@@ -80,7 +80,7 @@ export default function AboutPage() {
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 bg-gray-200 text-gray-800 rounded-full font-semibold shadow-md hover:bg-gray-300 transition"
+              className="px-6 py-3 bg-white text-gray-800 rounded-full font-semibold shadow-md hover:bg-gray-300 transition"
             >
               Contact Me
             </a>
