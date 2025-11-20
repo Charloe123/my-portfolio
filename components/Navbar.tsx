@@ -6,11 +6,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -20,30 +20,30 @@ export default function Navbar() {
           
          
           <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-teal-400 bg-clip-text text-transparent animate-gradient">
-            <Link href="#home">Charlotte Ncube</Link>
+            <Link href="/">Charlotte Ncube</Link>
           </div>
 
           
           <div className="hidden md:flex space-x-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="px-4 py-2 rounded-full bg-white/10 hover:bg-teal-500 transition backdrop-blur-sm"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           
           <div className="hidden md:block">
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="px-4 py-2 rounded-full bg-teal-500 hover:bg-teal-400 transition"
             >
               Hire Me
-            </a>
+            </Link>
           </div>
 
           
@@ -59,22 +59,22 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white/10 backdrop-blur-md px-4 pb-4 space-y-2 border-t border-white/20">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
               className="block px-4 py-2 rounded-full bg-white/10 hover:bg-teal-500 transition backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="block px-4 py-2 rounded-full bg-teal-500 hover:bg-teal-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Hire Me
-          </a>
+          </Link>
         </div>
       )}
     </nav>
