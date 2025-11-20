@@ -17,7 +17,7 @@ export default function TwoButtons() {
 
       
       <button
-        className="flex items-center justify-center gap-2 sm:gap-2.5 px-6 py-3 sm:px-8 sm:py-3 w-full sm:w-auto bg-white hover:bg-cyan-300 text-purple-500  rounded-full font-bold transition-transform duration-200 transform hover:scale-105"
+        className="flex items-center justify-center gap-2 sm:gap-2.5 px-6 py-3 sm:px-8 sm:py-3 w-full sm:w-auto bg-purple-500 hover:bg-purple-600 text-white rounded-full font-bold transition-transform duration-200 transform hover:scale-105"
         onClick={() => alert("Downloading Resume...")}
       >
         <FaDownload size={18} />

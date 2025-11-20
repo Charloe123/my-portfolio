@@ -46,7 +46,7 @@ export default function Home() {
               
               <button
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="animate-bounce w-12 h-12 bg-[#947EA7]/20 backdrop-blur-md rounded-full flex items-center justify-center text-[#1F162F] hover:text-[#6E2B62] hover:bg-[#947EA7]/30 transition-all duration-300 ml-10"
+                className="animate-bounce w-12 h-12 bg-[#947EA7]/20 backdrop-blur-md rounded-full flex items-center justify-center text-[#1F162F] hover:text-[#6E2B62] hover:bg-[#947EA7]/30 transition-all duration-300 ml-4 sm:ml-10"
                 aria-label="Scroll down"
               >
                 <svg
@@ -74,7 +74,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-96 h-96 animate-rotate-slow">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 animate-rotate-slow">
               
               <div className="absolute inset-0 bg-gradient-to-br from-[#947EA7] via-[#6E2B62] to-[#0A0F1F] rounded-full opacity-20 animate-pulse"></div>
 

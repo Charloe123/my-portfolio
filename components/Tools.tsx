@@ -27,7 +27,7 @@ export default function Tools() {
 
       <div className="relative w-full flex overflow-hidden">
         <motion.div
-          className="flex space-x-12"
+          className="flex space-x-6 sm:space-x-12"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             repeat: Infinity,
@@ -38,7 +38,7 @@ export default function Tools() {
           {[...tools, ...tools].map((tool, i) => (
             <motion.div
               key={i}
-              className="flex flex-col items-center bg-[#947EA7]/20  backdrop-blur-sm p-6 rounded-lg text-white shadow-lg min-w-[150px] mt-4"
+              className="flex flex-col items-center bg-[#947EA7]/20  backdrop-blur-sm p-4 sm:p-6 rounded-lg text-white shadow-lg min-w-[120px] sm:min-w-[150px] mt-4"
               animate={{ y: [0, -10, 0] }}
               transition={{
                 repeat: Infinity,
@@ -47,8 +47,8 @@ export default function Tools() {
                 delay: i * 0.1,
               }}
             >
-              <div className="text-5xl mb-3">{tool.icon}</div>
-              <p className="text-lg">{tool.name}</p>
+              <div className="text-4xl sm:text-5xl mb-3">{tool.icon}</div>
+              <p className="text-base sm:text-lg">{tool.name}</p>
             </motion.div>
           ))}
         </motion.div>
