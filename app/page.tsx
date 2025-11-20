@@ -120,18 +120,18 @@ export default function Home() {
       </section>
 
     
-      <section className="min-h-screen pt-0">
+      <section id="about" className="min-h-screen pt-0">
         <AboutPage />
       </section>
 
-      <section>
+      <section id="skills">
         <Tools />
       </section>
 
       <section id="projects" className=" w-full overflow-x-hidden">
         <MyProject />
       </section>
-<section>
+<section id="contact">
   <ContactPage />
 </section>
     </>

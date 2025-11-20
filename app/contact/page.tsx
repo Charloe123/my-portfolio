@@ -4,7 +4,7 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import { FaUser, FaEnvelope, FaComment, FaPhoneAlt, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaComment, FaPhoneAlt, FaMapMarkerAlt,  } from 'react-icons/fa';
 
 export default function ContactPage() {
   const form = useRef<HTMLFormElement>(null);
@@ -18,10 +18,10 @@ export default function ContactPage() {
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'YOUR_SERVICE_ID', 
+        'YOUR_TEMPLATE_ID', 
         form.current!,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'YOUR_PUBLIC_KEY' 
       )
       .then(
         (result) => {
@@ -58,7 +58,7 @@ export default function ContactPage() {
         </motion.h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Form */}
+          
           <motion.div
             className="glass-surface p-8 rounded-2xl shadow-2xl border border-[#947EA7]/20"
             initial={{ opacity: 0, x: -50 }}
@@ -158,7 +158,7 @@ export default function ContactPage() {
             </form>
           </motion.div>
 
-          {/* Contact Information */}
+         
           <motion.div
             className="glass-surface p-8 rounded-2xl shadow-2xl border border-[#947EA7]/20 flex flex-col justify-center"
             initial={{ opacity: 0, x: 50 }}
@@ -205,51 +205,7 @@ export default function ContactPage() {
               </motion.div>
             </div>
 
-            <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-4 text-[#F5F7FA]">Follow Me</h3>
-              <div className="flex justify-center space-x-4">
-                <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaGithub size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaLinkedin size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaInstagram size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaFacebook size={20} />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <FaWhatsapp size={20} />
-                </motion.a>
-              </div>
-            </div>
+          
 
             <p className="mt-6 text-[#F5F7FA]/70 text-sm text-center">
               I{'\''}m always excited to work on new projects and discuss innovative ideas. Let{'\''}s create something amazing together!

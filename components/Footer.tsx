@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaWhatsapp, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin , FaFacebook, FaWhatsapp, FaHeart } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = 2025;
@@ -64,7 +64,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-[#F5F7FA] mb-4">Connect With Me</h4>
             <div className="flex justify-center md:justify-end space-x-4">
               <motion.a
-                href="#"
+                href="https://github.com/Charloe123"
                 className="w-10 h-10 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -72,7 +72,7 @@ export default function Footer() {
                 <FaGithub size={18} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://www.linkedin.com/in/charlotte-ncube-b926a6367/?skipRedirect=true"
                 className="w-10 h-10 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -85,18 +85,11 @@ export default function Footer() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <FaInstagram size={18} />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="w-10 h-10 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
+               
                 <FaFacebook size={18} />
               </motion.a>
               <motion.a
-                href="#"
+                href="https://wa.me/263775596819"
                 className="w-10 h-10 bg-[#F5F7FA]/10 rounded-full flex items-center justify-center text-[#947EA7] hover:bg-[#947EA7] hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

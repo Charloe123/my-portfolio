@@ -10,36 +10,36 @@ const projects = [
   {
     id: 1,
     title: "Jameson",
-    github: "https://github.com/user/project-one",
+    github: "https://github.com/Charloe123/Jameson",
     description: "This is Project One.",
     image: "https://res.cloudinary.com/dpahyb1x9/image/upload/v1763372734/Capture_jam_d4d2vk.png",
-    liveLink: "https://project-one.com",
+    liveLink: "https://jameson-theta.vercel.app/",
   },
   {
     id: 2,
     title: "Nyamatusi",
-    github: "https://github.com/user/project-two",
+    github: "https://github.com/Charloe123/Nyamatusi",
     description: "This is Project Two.",
     image: "https://res.cloudinary.com/dpahyb1x9/image/upload/v1763372736/Capture_Nyamatusi_jnheaw.png",
-    liveLink: "https://project-two.com",
+    liveLink: "https://nyamatusi-one.vercel.app/",
   },
   {
     id: 3,
-    title: "Mkhosane ASD",
-    github: "https://github.com/user/project-three",
+    title: "Charlotte-Facet",
+    github: "https://github.com/Charloe123/Charlotte-facet",
     description: "This is Project Three.",
     image: "https://res.cloudinary.com/dpahyb1x9/image/upload/v1763382152/linked_j7ttcd.png",
-    liveLink: "https://project-three.com",
+    liveLink: "https://charlotte-facet.vercel.app/",
   },
 ];
 
 export default function ThreeCards() {
-  const [currentIndex, setCurrentIndex] = useState(0); // Start with first project
+  const [currentIndex, setCurrentIndex] = useState(0); 
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % projects.length);
-    }, 4000); // Change every 4 seconds
+    }, 4000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -105,23 +105,24 @@ export default function ThreeCards() {
                 <div className="flex flex-wrap gap-2 mb-3">
                   {projects[currentIndex].id === 1 && (
                     <>
-                      <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">React</span>
-                      <span className="bg-green-600 text-white px-2 py-1 rounded text-xs">Node.js</span>
-                      <span className="bg-yellow-600 text-white px-2 py-1 rounded text-xs">MongoDB</span>
+                      <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">Html</span>
+                      <span className="bg-green-600 text-white px-2 py-1 rounded text-xs">SASS</span>
+                      
                     </>
                   )}
                   {projects[currentIndex].id === 2 && (
                     <>
-                      <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs">Next.js</span>
-                      <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs">Tailwind</span>
-                      <span className="bg-cyan-600 text-white px-2 py-1 rounded text-xs">TypeScript</span>
+                      <span className="bg-blue-500 text-white px-2 py-1 rounded text-xs">Html</span>
+                      <span className="bg-purple-600 text-white px-2 py-1 rounded text-xs">SASS</span>
+                      
                     </>
                   )}
                   {projects[currentIndex].id === 3 && (
                     <>
-                      <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">React</span>
-                      <span className="bg-green-600 text-white px-2 py-1 rounded text-xs">Express</span>
-                      <span className="bg-red-600 text-white px-2 py-1 rounded text-xs">PostgreSQL</span>
+                      <span className="bg-blue-600 text-white px-2 py-1 rounded text-xs">Nextjs</span>
+                      <span className="bg-green-600 text-white px-2 py-1 rounded text-xs">Typescript</span>
+                      <span className="bg-red-600 text-white px-2 py-1 rounded text-xs">Mongo db</span>
+                      <span className="bg-green-600 text-white px-2 py-1 rounded text-xs">Tailwind</span>
                     </>
                   )}
                 </div>
